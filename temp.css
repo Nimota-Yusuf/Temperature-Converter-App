@@ -1,8 +1,332 @@
 *{
     margin: 0;
     padding: 0;
-}
-body{
-    box-sizing: border-box;
     
+}
+body{   
+    background-image: url(./Image/temps.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.temp-container{
+    padding: 35px;
+    border-radius: 10px;
+    margin-left: 20%;
+    text-align: center;
+}
+h1{
+    padding: 7px;
+    font-size: 43px;
+    font-weight: 700;
+    color: rgb(224, 212, 212);
+}
+p{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+}
+.temp-option, .temp-input{
+    background-color: rgb(66, 61, 61);
+    padding: 15px 20px;
+    border-radius: 7px;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 600;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.temp-option:hover{
+    color: rgba(20, 198, 252, 0.822);
+    cursor: pointer;
+}
+.temp-value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 22px 20px;
+    padding: 15px;
+}
+.temp-input{
+    margin-right: 20px;
+    color: aqua;
+}
+.displayResult{
+    margin: 0, 15%;
+    color: rgb(236, 205, 25);
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 500;
+    text-align: center;
+    font-style: italic;
+    opacity: 0.9;
+}
+.displayResult:hover{
+    cursor: pointer;
+    color: red;
+    transition: all 700ms ease-in-out 500ms;
+}
+hr{
+    margin: 3px auto;
+    text-align: center;
+}
+.temp-grid{
+    padding: 10px;
+    margin-right: 7%;
+}
+.temp-unit{
+    color: antiquewhite; 
+    font-size: 33px;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+.temp-grid{
+    display: flex;
+    justify-content: space-between; 
+    padding: 20px;
+    margin: 10px;
+}
+.col{
+    border: 1px solid white;
+    padding: 20px;
+    color: aqua;
+    background-color: inherit;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 15px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+    body{
+        background-image: url(./Image/smoke2.jpg);
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+    width: 100%;
+    margin-top: 50px;
+    padding: 0px;
+   }
+   .temp-container{
+    width: 100%;
+    margin: auto;
+    padding: 0px;
+   }
+   h1{
+    font-size: 22px;
+    text-align: center;
+   }
+   p{
+    font-size: 19px;
+   }
+   .temp-value{
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    align-items:start;
+   }
+   .temp-option, .temp-input{
+    background-color: rgb(66, 61, 61);
+    padding: 10px 5px;
+    border-radius: 7px;
+    color: aliceblue;
+    font-size: 16px;
+    font-weight: 600;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 0;
+}
+hr{
+    width: 80%;
+}
+.temp-grid{
+    flex-direction: column;
+}
+.col{
+    margin: 7px 0;
+
+}
+}
+.displayResult{
+    color: rgb(236, 212, 71);
+    font-size: 18px;
+}
+
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    body{
+        background-image: url(./Image/smoke2.jpg);
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+    width: 100%;
+    margin-top: 50px;
+    padding: 0px;
+   }
+   .temp-container{
+    width: 100%;
+    margin: auto;
+    padding: 0px;
+   }
+   h1{
+    font-size: 22px;
+    text-align: center;
+   }
+   p{
+    font-size: 19px;
+   }
+   .temp-value{
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    align-items:start;
+   }
+   .temp-option, .temp-input{
+    background-color: rgb(66, 61, 61);
+    padding: 10px 5px;
+    border-radius: 7px;
+    color: aliceblue;
+    font-size: 16px;
+    font-weight: 600;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 0;
+}
+hr{
+    width: 80%;
+}
+.temp-grid{
+    flex-direction: column;
+}
+.col{
+    margin: 7px 0;
+
+}
+}
+.displayResult{
+    color: rgb(236, 212, 71);
+    font-size: 18px;
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+   }
+   .temp-container{
+    width: 100%;
+    float: right;
+    margin: 15% 0 0 50%;
+    padding: 0px;
+    border: 1px solid aqua;
+   }
+   h1{
+    font-size: 30px;
+    text-align: center;
+   }
+   p{
+    font-size: 22px;
+   }
+   .temp-value{
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    align-items:start;
+   }
+   .temp-option, .temp-input{
+    background-color: rgb(66, 61, 61);
+    padding: 10px 5px;
+    border-radius: 7px;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 600;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 0;
+}
+hr{
+    width: 85%;
+}
+.temp-grid{
+    flex-direction: column;
+}
+.col{
+    margin: 7px 0;
+
+}
+}
+.displayResult{
+    color: rgb(236, 212, 71);
+    font-size: 19px;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+   }
+   .temp-container{
+    width: 70%;
+    float: right;
+    margin: 15% 0 0 35%;
+    padding: 0px;
+   }
+   hr{
+    width: 85%;
+   }
+   h1{
+    font-size: 40px;
+    text-align: center;
+   }
+   p{
+    font-size: 23px;
+   }
+   .temp-value{
+   width: 85%;
+   }
+   .temp-option, .temp-input{
+    background-color: rgb(66, 61, 61);
+    padding: 10px 2px;
+    border-radius: 7px;
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 600;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+}
+.temp-grid{
+    flex-direction: column;
+}
+.col{
+    justify-content: end;
+    align-items: end;
+    width: 80%;
+    font-size: 21px;
+    margin: 7px 10px;
+
+}
+}
+.displayResult{
+    color: rgb(236, 212, 71);
+    font-size: 25px;
 }
